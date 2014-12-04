@@ -1,6 +1,7 @@
 --[[
-c2cap.lua
+C2Cap.lua
 this is main part of C2Cap.lrplugin
+Author:@jenoki48
 --]]
 
 local PluginTitle='C2Cap'
