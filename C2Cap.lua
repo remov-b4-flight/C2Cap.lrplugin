@@ -30,7 +30,7 @@ end
 
 local currSelection=CurrentSelectionArray[1]
 
-C2Logger:debug('Target type='..currSelection:type())
+C2Logger:debug('Target type='..currSelection.type())
 if (currSelection.type() ~= 'LrCollection') then
 	C2Logger:error('This is not a Collection.')
 	return
