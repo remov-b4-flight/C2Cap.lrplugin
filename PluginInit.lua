@@ -6,12 +6,12 @@ Author:@jenoki48
 --]]
 local prefs = import 'LrPrefs'.prefsForPlugin() 
 
-if prefs.isLog == nil then 
-	prefs.isLog = true
-end
+--if prefs.isLog == nil then 
+--	prefs.isLog = true
+--end
 
-if prefs.isRemove == nil then
-	prefs.isRemove = false
+if prefs.isRevert == nil then
+	prefs.isRevert = false
 end
 
 if prefs.isForced == nil then

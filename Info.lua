@@ -12,13 +12,12 @@ return {
 	LrPluginName = 'C2Cap',
 	LrPluginInfoUrl='https://twitter.com/jenoki48',
 	LrLibraryMenuItems = { 
-		{title = 'C2Cap',
-		file = 'C2Cap.lua',
-		enabledWhen = 'photosAvailable',},
+		{title = 'Collection',
+		file = 'C2Cap.lua',},
 	},
 	LrPluginInfoProvider = 'PluginInfo.lua',
 	LrInitPlugin = 'PluginInit.lua',
 
-	VERSION = { major=1, minor=0, revision=0, build=0, },
+	VERSION = { major=1, minor=1, revision=3, build=0, },
 
 }

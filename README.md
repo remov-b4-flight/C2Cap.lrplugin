@@ -37,13 +37,12 @@ Select a collection to process, and select menu from 'library > plugin extra > C
 #4. 設定. 
 プラグインマネージャの設定で以下の処理が可能です。
 
-##Enable log (ログファイル作成). 
-C2Capの処理ログファイルを作成します。名前はC2Cap.logで
-Lightroomプラグインの規定のログファイルフォルダに作られます。
-
 ##Force Update(強制アップデート). 
 通常はコレクション内の説明が設定されていない写真に対して処理を行いますが、
 これを全ての写真に対して強制的に行うよう設定します。
+##Revert Back(指定コレクションに戻る)
+コレクションのCaption設定処理を終えた後、テキストボックスで指定した
+コレクションに移動します。
 
 #5. 作者・ライセンス
 じゅん [twitter](https://twitter.com/jenoki48 @jenoki48)
