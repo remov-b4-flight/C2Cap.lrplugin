@@ -1,7 +1,7 @@
 --[[----------------------------------------------------------------------------
 Info.lua
 C2Cap.lrplugin
-Author:@jenoki48
+Author:@remov_b4_flight
 ------------------------------------------------------------------------------]]
 
 return {
@@ -10,7 +10,7 @@ return {
 
 	LrToolkitIdentifier = 'nu.mine.ruffles.c2cap',
 	LrPluginName = 'C2Cap',
-	LrPluginInfoUrl='https://twitter.com/jenoki48',
+	LrPluginInfoUrl='https://twitter.com/remov_b4_flight',
 	LrLibraryMenuItems = { 
 		{title = 'Collection',
 		file = 'C2Cap.lua',},
@@ -18,6 +18,6 @@ return {
 	LrPluginInfoProvider = 'PluginInfo.lua',
 	LrInitPlugin = 'PluginInit.lua',
 
-	VERSION = { major=1, minor=1, revision=3, build=0, },
+	VERSION = { major=1, minor=1, revision=4, build=0, },
 
 }
