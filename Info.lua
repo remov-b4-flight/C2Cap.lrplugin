@@ -12,7 +12,7 @@ return {
 	LrPluginName = 'C2Cap',
 	LrPluginInfoUrl='https://twitter.com/remov_b4_flight',
 	LrLibraryMenuItems = { 
-		{title = 'Collection',
+		{title = '&Collection',
 		file = 'C2Cap.lua',},
 	},
 	LrPluginInfoProvider = 'PluginInfo.lua',
