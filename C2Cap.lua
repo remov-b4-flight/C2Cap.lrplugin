@@ -17,7 +17,7 @@ if (#CurrentSelectionArray > 1) then
 return
 end
 
-local currSelection=CurrentSelectionArray[1]
+local currSelection = CurrentSelectionArray[1]
 
 if (currSelection.type() ~= 'LrCollection') then
 return
@@ -37,7 +37,7 @@ LrTasks.startAsyncTask( function ()
 		--loops photos in collection
 		for i,PhotoIt in ipairs(currPhotos) do
 			currCaption = PhotoIt:getFormattedMetadata('caption')
-			if ( prefs.isForced or currCaption=="" ) then
+			if ( prefs.isForced or currCaption == "" ) then
 				PhotoIt:setRawMetadata('caption',CollectionName)
 			end
 			ProgressBar:setPortionComplete(i,countPhotos)
