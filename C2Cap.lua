@@ -14,15 +14,14 @@ local CurrentCatalog = LrApplication:activeCatalog()
 local CurrentSelectionArray = CurrentCatalog:getActiveSources()
 
 if (#CurrentSelectionArray > 1) then
-return
+	return
 end
 
 local currSelection = CurrentSelectionArray[1]
 
 if (currSelection.type() ~= 'LrCollection') then
-return
+	return
 end
-
 --Main part of this plugin.
 LrTasks.startAsyncTask( function ()
 	if (currSelection:isSmartCollection()) then 
@@ -30,16 +29,29 @@ LrTasks.startAsyncTask( function ()
 	end
 	local CollectionName = currSelection:getName()
 	local ProgressBar = LrProgress({title = 'Processing Collection : ' .. CollectionName})
-	local currPhotos = currSelection:getPhotos()
+	local currPhotos = CurrentCatalog:findPhotos {
+		searchDesc = {
+			{
+				criteria = "caption",
+				operation = "empty",
+				value = "",
+				value2 = "",
+			},{
+				criteria = "collection",
+				operation = "any",
+				value = CollectionName,
+				value2 = "",
+			},
+			combine = "intersect",
+		},
+	}
+
 	local countPhotos = #currPhotos
 	local CompleteFlag = 0
 	CurrentCatalog:withWriteAccessDo('Set Caption',function()
 		--loops photos in collection
 		for i,PhotoIt in ipairs(currPhotos) do
-			currCaption = PhotoIt:getFormattedMetadata('caption')
-			if ( prefs.isForced or currCaption == "" ) then
 				PhotoIt:setRawMetadata('caption',CollectionName)
-			end
 			ProgressBar:setPortionComplete(i,countPhotos)
 		end --end of for photos loop
 		CompleteFlag = 1
