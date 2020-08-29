@@ -17,8 +17,7 @@ This plugin set photo's caption to collection's name which photos are contained.
 Collection 2 Caption -> 'C2Cap' です。
 
 処理の対象になる写真はコレクションに含まれる写真の中でまだ'Caption'がついていない
-ものです。(これは、プラグインマネージャーの設定'Force Update'にて強制的にすべての写真を
-処理するように設定可能です。). 
+ものです。
 
 #2. Install/インストール. 
 (It's standard way to install Lightroom plugin./Lightroomプラグインの標準的な手順です)  
@@ -37,15 +36,12 @@ Select a collection to process, and select menu from 'library > plugin extra > C
 #4. 設定. 
 プラグインマネージャの設定で以下の処理が可能です。
 
-##Force Update(強制アップデート). 
-通常はコレクション内の説明が設定されていない写真に対して処理を行いますが、
-これを全ての写真に対して強制的に行うよう設定します。
 ##Revert Back(指定コレクションに戻る)
 コレクションのCaption設定処理を終えた後、テキストボックスで指定した
 コレクションに移動します。
 
 #5. 作者・ライセンス
-じゅん [twitter](https://twitter.com/jenoki48 @jenoki48)
+じゅん [twitter](https://twitter.com/remov_b4_flight @remov_b4_flight)
 ライセンスはGPLです。  
 開発は全てMacで行っています。  
 Windowsでの動作報告歓迎します。
