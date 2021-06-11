@@ -1,5 +1,5 @@
 C2Cap
-=====
+***
 
 Adobe Lightroom plugin to Set 'Caption' of bulk Photos.  
 大量の写真に対して 「説明」を付ける為のAdobe Lightroom のプラグイン。  
@@ -38,7 +38,7 @@ Keyboard in System preference. select 'shortcut' tab.
 Select Application and Add shortcut to 'Abobe Lightroom Classic' As  
 Library->Plug-in Extras->   Collection  
 (3 spaces between -> and Collection )  
-
+***
 #4. 設定. 
 プラグインマネージャの設定で以下の処理が可能です。
 
