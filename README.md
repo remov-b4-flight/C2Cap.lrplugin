@@ -1,5 +1,4 @@
 # C2Cap
-***
 
 Adobe Lightroom plugin to Set 'Caption' of bulk Photos.  
 大量の写真に対して 「説明」を付ける為のAdobe Lightroom のプラグイン。  
