@@ -31,7 +31,13 @@ Lightroomのプラグインマネージャーを開き'追加'ボタンを押し
 Select a collection to process, and select menu from 'library > plugin extra > C2Cap'.  
 処理したいコレクションを選択して ライブラリ > プラグインエクストラ > C2Cap を選択します。  
 コレクションに含まれる写真のなかで説明(Caption)が記入されていない全て写真に対して、  
-説明にコレクションの名前を設定します。  
+説明にコレクションの名前を設定します。
+***
+Useful setting for macOS user / macOSユーザー向け便利な設定
+Keyboard in System preference. select 'shortcut' tab.
+Select Application and Add shortcut to 'Abobe Lightroom Classic' As
+Library->Plug-in Extras->   Collection
+(3 spaces between -> and Collection )
 
 #4. 設定. 
 プラグインマネージャの設定で以下の処理が可能です。
