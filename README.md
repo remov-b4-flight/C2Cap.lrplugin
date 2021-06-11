@@ -33,7 +33,7 @@ Select a collection to process, and select menu from 'library > plugin extra > C
 コレクションに含まれる写真のなかで説明(Caption)が記入されていない全て写真に対して、  
 説明にコレクションの名前を設定します。
 ***
-Useful setting for macOS user / macOSユーザー向け便利な設定  
+## Useful setting for macOS user / macOSユーザー向け便利な設定  
 Keyboard in System preference. select 'shortcut' tab.  
 Select Application and Add shortcut to 'Abobe Lightroom Classic' As  
 Library->Plug-in Extras->   Collection  
