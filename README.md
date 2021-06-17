@@ -13,9 +13,10 @@ This plugin set photo's caption to collection's name which photos are contained.
 具体的にはLightroom上で写真を管理する際、コレクションを使って写真を分類する手法が
 一般的ですが、このコレクションの「名前」を使ってコレクションに含まれる写真に
 'Caption'を設定します。  
-Collection 2 Caption -> 'C2Cap' です。
+Collection 2 Caption -> 'C2Cap' です。  
 
-処理の対象になる写真はコレクションに含まれる写真の中でまだ'Caption'がついていない
+Target of C2Cap is photos in collection that without 'Caption' yet.  
+処理の対象になる写真はコレクションに含まれる写真の中で、まだ'Caption'がついていない
 ものです。
 
 # 2. Install/インストール.  
@@ -36,7 +37,7 @@ Select a collection to process, and select menu from 'library > plugin extra > C
 Keyboard in System preference. select 'shortcut' tab.  
 Select Application and Add shortcut to 'Abobe Lightroom Classic' As  
 Library->Plug-in Extras->   Collection  
-(3 spaces between -> and Collection )  
+(3 spaces between last '->' and 'Collection' )  
 ***
 # 4. 設定. 
 プラグインマネージャの設定で以下の処理が可能です。
