@@ -1,9 +1,8 @@
---[[
-PluginInit.lua
-Initialize routines when Plugin is loaded
-C2Cap.lrplugin
-Author:@jenoki48
---]]
+--[[-------------------------------------------------------
+@file	PluginInit.lua
+@brief	Initialize routines when C2Cap.lrplugin Plugin is loaded. 
+@author	remove-b4-flight
+---------------------------------------------------------]]
 local prefs = import 'LrPrefs'.prefsForPlugin() 
 
 if prefs.isRevert == nil then

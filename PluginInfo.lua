@@ -1,8 +1,8 @@
---[[----------------------------------------------------------------------------
-PluginInfo.lua
-C2Cap.lrplugin
-Author:@jenoki48
-------------------------------------------------------------------------------]]
+--[[-------------------------------------------------------
+@file	PluginInfo.lua
+@bried	Define plugin manager dialogs at C2Cap.lrplugin
+@author	remov-b4-flight
+---------------------------------------------------------]]
 local LrView = import 'LrView'
 local bind = LrView.bind -- a local shortcut for the binding function
 local prefs = import 'LrPrefs'.prefsForPlugin()

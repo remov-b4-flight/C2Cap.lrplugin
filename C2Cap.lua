@@ -1,8 +1,8 @@
---[[
-C2Cap.lua
-this is main part of C2Cap.lrplugin
-Author:@remov_b4_flight
---]]
+--[[-------------------------------------------------------
+@file	C2Cap.lua
+@brief	this is main part of C2Cap.lrplugin
+@author	remov-b4-flight
+---------------------------------------------------------]]
 
 local PluginTitle='C2Cap'
 local LrApplication = import 'LrApplication'
