@@ -12,11 +12,13 @@ local PluginInfo = {}
 function PluginInfo.startDialog( propertyTable )
 	propertyTable.isRevert = prefs.isRevert
 	propertyTable.RevertTo = prefs.RevertTo
+	propertyTable.Revert2nd = prefs.Revert2nd
 end
 
 function PluginInfo.endDialog( propertyTable ,why )
 	prefs.isRevert = propertyTable.isRevert
 	prefs.RevertTo = propertyTable.RevertTo
+	prefs.Revert2nd = propertyTable.Revert2nd
 end
 
 function PluginInfo.sectionsForTopOfDialog( viewFactory, propertyTable )
@@ -27,7 +29,14 @@ function PluginInfo.sectionsForTopOfDialog( viewFactory, propertyTable )
 			bind_to_object = propertyTable,
 			viewFactory:row {
 				viewFactory:checkbox {title = 'Revert Back', value = bind 'isRevert',},
-				viewFactory:edit_field {title = 'Collection', value = bind 'RevertTo',},
+			},
+			viewFactory:row {
+				viewFactory:static_text {title = 'Collection',},
+				viewFactory:edit_field {value = bind 'RevertTo',},
+			},
+			viewFactory:row {
+				viewFactory:static_text {title = 'Second Col.',},
+				viewFactory:edit_field {value = bind 'Revert2nd',},
 			},
 		},
 	}

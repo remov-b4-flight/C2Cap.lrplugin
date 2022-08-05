@@ -12,6 +12,7 @@ local prefs = import 'LrPrefs'.prefsForPlugin()
 
 local CurrentCatalog = LrApplication:activeCatalog()
 local CurrentSelectionArray = CurrentCatalog:getActiveSources()
+local Threshold = 15
 
 if (#CurrentSelectionArray > 1) then
 	return
@@ -51,7 +52,7 @@ LrTasks.startAsyncTask( function ()
 	CurrentCatalog:withWriteAccessDo('Set Caption',function()
 		--loops photos in collection
 		for i,PhotoIt in ipairs(currPhotos) do
-				PhotoIt:setRawMetadata('caption',CollectionName)
+			PhotoIt:setRawMetadata('caption',CollectionName)
 			ProgressBar:setPortionComplete(i,countPhotos)
 		end --end of for photos loop
 		CompleteFlag = 1
@@ -65,11 +66,27 @@ LrTasks.startAsyncTask( function ()
 	-- Revert back to prefs.RevertTo
 	if prefs.isRevert and CompleteFlag == 1 then
 		local collections = CurrentCatalog:getChildCollections()
+		local photocount = 0
+		local RevertCol,RevertCol2nd
 		for i,ColIt in ipairs(collections) do
-			if ColIt:getName()==prefs.RevertTo then
-				CurrentCatalog:setActiveSources(ColIt)
+			if ColIt:getName() == prefs.RevertTo then
+				local tempArray = ColIt:getPhotos()
+				photocount = #tempArray
+				RevertCol = ColIt
+				if Threshold <= photocount then
+					RevertCol2nd = ColIt
+				end
+			elseif ColIt:getName() == prefs.Revert2nd then
+				RevertCol2nd = ColIt
+			end
+			if RevertCol ~= nil and RevertCol2nd ~= nil then
 				break
 			end
+		end
+		if Threshold <= photocount then
+			CurrentCatalog:setActiveSources(RevertCol)
+		else
+			CurrentCatalog:setActiveSources(RevertCol2nd)
 		end
 	end
 end ) --end of startAsyncTask function()
