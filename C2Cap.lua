@@ -68,6 +68,7 @@ LrTasks.startAsyncTask( function ()
 		for i,ColIt in ipairs(collections) do
 			if ColIt:getName()==prefs.RevertTo then
 				CurrentCatalog:setActiveSources(ColIt)
+				break
 			end
 		end
 	end
