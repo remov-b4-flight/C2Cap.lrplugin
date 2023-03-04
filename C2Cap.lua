@@ -20,7 +20,7 @@ end
 
 local currSelection = CurrentSelectionArray[1]
 
-if (currSelection.type() ~= 'LrCollection') then
+if (type(currSelection) == "string" or currSelection.type() ~= 'LrCollection') then
 	return
 end
 --Main part of this plugin.
