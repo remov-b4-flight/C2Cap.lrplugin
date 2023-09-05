@@ -1,6 +1,6 @@
 --[[-------------------------------------------------------
 @file Info.lua
-@brief Information of C2Cap.lrplugin provided for Lr.
+@brief Information of C2Cap.lrplugin provided for LrC.
 @Author remov_b4_flight
 ---------------------------------------------------------]]
 
