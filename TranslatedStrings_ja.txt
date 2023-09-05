@@ -1,4 +1,4 @@
-"$$$/c2cap/processing=コレクションを処理中:"
+"$$$/c2cap/processing=コレクションを処理中 : "
 "$$$/c2cap/description=コレクション内の写真の説明にコレクションの名前を付けます"
 "$$$/c2cap/revertback=コレクションに戻る"
 "$$$/c2cap/revertto=戻り先"
