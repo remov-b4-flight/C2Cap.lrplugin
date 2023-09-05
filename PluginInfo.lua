@@ -25,17 +25,17 @@ function PluginInfo.sectionsForTopOfDialog( viewFactory, propertyTable )
 	return {
 		{
 			title = 'C2Cap',
-			synopsis = 'Set caption to collection name contained by.',
+			synopsis = LOC '$$$/c2cap/description=Set caption to collection name contained by.',
 			bind_to_object = propertyTable,
 			viewFactory:row {
-				viewFactory:checkbox {title = 'Revert Back', value = bind 'isRevert',},
+				viewFactory:checkbox {title = LOC '$$$/c2cap/revertback=Revert Back', value = bind 'isRevert',},
 			},
 			viewFactory:row {
-				viewFactory:static_text {title = 'Collection',},
+				viewFactory:static_text {title = LOC '$$$/c2cap/revertto=Collection',},
 				viewFactory:edit_field {value = bind 'RevertTo',},
 			},
 			viewFactory:row {
-				viewFactory:static_text {title = 'Second Col.',},
+				viewFactory:static_text {title = LOC '$$$/c2cap/secondto=Second Col.',},
 				viewFactory:edit_field {value = bind 'Revert2nd',},
 			},
 		},

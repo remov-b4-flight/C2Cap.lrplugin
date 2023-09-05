@@ -29,7 +29,7 @@ LrTasks.startAsyncTask( function ()
 		return
 	end
 	local CollectionName = currSelection:getName()
-	local ProgressBar = LrProgress({title = 'Processing Collection : ' .. CollectionName})
+	local ProgressBar = LrProgress({title = LOC '$$$/c2cap/processing=Processing Collection:' .. CollectionName})
 	local currPhotos = CurrentCatalog:findPhotos {
 		searchDesc = {
 			{
