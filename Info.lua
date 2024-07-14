@@ -6,7 +6,7 @@
 
 return {
 
-	LrSdkVersion = 3.0,
+	LrSdkVersion = 4.0,
 
 	LrToolkitIdentifier = 'nu.mine.ruffles.c2cap',
 	LrPluginName = 'C2Cap',
@@ -18,6 +18,6 @@ return {
 	LrPluginInfoProvider = 'PluginInfo.lua',
 	LrInitPlugin = 'PluginInit.lua',
 
-	VERSION = { major=1, minor=5, revision=0, build=0, },
+	VERSION = { major=1, minor=5, revision=1, build=0, },
 
 }
