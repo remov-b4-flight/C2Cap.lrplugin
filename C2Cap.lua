@@ -17,12 +17,19 @@ local Threshold = 15
 if (#CurrentSelectionArray > 1) then
 	return
 end
-
+-- get 1st value of array
 local currSelection = CurrentSelectionArray[1]
 
-if (type(currSelection) == "string" or currSelection.type() ~= 'LrCollection') then
+if (currSelection == nil) then 
 	return
 end
+if (type(currSelection) == "string") then
+	return
+end
+if (currSelection.type() ~= 'LrCollection') then
+	return
+end
+
 --Main part of this plugin.
 LrTasks.startAsyncTask( function ()
 	if (currSelection:isSmartCollection()) then 
