@@ -22,11 +22,10 @@ local currSelection = CurrentSelectionArray[1]
 
 if (currSelection == nil) then 
 	return
-end
-if (type(currSelection) == "string") then
+-- Check selected collection is not kAllPhotos,k** .. etc.
+elseif (type(currSelection) == "string") then
 	return
-end
-if (currSelection.type() ~= 'LrCollection') then
+elseif (currSelection.type() ~= 'LrCollection') then
 	return
 end
 
