@@ -14,10 +14,6 @@ local CurrentCatalog = LrApplication:activeCatalog()
 local CurrentSelectionArray = CurrentCatalog:getActiveSources()
 local Threshold = 15
 
---local LrLogger = import 'LrLogger'
---local logger = LrLogger( 'C2Cap' )
---logger:enable( 'logfile' )
-
 if (#CurrentSelectionArray > 1) then
 	return
 end
@@ -75,18 +71,15 @@ LrTasks.startAsyncTask( function ()
 
 	-- Revert back to prefs.RevertTo
 	if prefs.isRevert and CompleteFlag == 1 then
-		local photocount = 0
---		logger:trace("Revert:"..prefs.RevertColID)
---		logger:trace("2nd:"..prefs.RevertColID2nd)
-		local RevertCol = CurrentCatalog:getCollectionBylocalIdentifier(prefs.RevertColID)
-		local RevertCol2nd = CurrentCatalog:getCollectionBylocalIdentifier(prefs.RevertColID2nd)
+		local RevertCol = CurrentCatalog:getCollectionByLocalIdentifier(prefs.RevertColID)
 		if RevertCol == nil then
 			return
 		end
-		photocount = #RevertCol:getPhotos()
+		local photocount = #RevertCol:getPhotos()
 		if Threshold <= photocount then
 			CurrentCatalog:setActiveSources(RevertCol)
 		else
+			local RevertCol2nd = CurrentCatalog:getCollectionByLocalIdentifier(prefs.RevertColID2nd)
 			if RevertCol2nd == nil then
 				return
 			end

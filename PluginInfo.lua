@@ -12,10 +12,6 @@ local prefs = import 'LrPrefs'.prefsForPlugin()
 local PluginInfo = {}
 local CurrentCatalog = LrApplication.activeCatalog()
 
---local LrLogger = import 'LrLogger'
---local logger = LrLogger( 'C2Cap' )
---logger:enable( 'logfile' )
-
 function PluginInfo.startDialog( propertyTable )
 	propertyTable.isRevert = prefs.isRevert
 	propertyTable.RevertTo = prefs.RevertTo
@@ -27,15 +23,12 @@ end
 function PluginInfo.endDialog( propertyTable )
 	LrTasks.startAsyncTask( function ()
 		local collections = CurrentCatalog:getChildCollections()
-		logger:trace('collections:'..#collections)
 		local RevertColID,RevertColID2nd
 		for i,ColIt in ipairs(collections) do
 			if ColIt:getName() == propertyTable.RevertTo then
 				RevertColID = ColIt.localIdentifier
-				logger:trace('RevertColID:'..RevertColID)
 			elseif ColIt:getName() == propertyTable.Revert2nd then
 				RevertColID2nd = ColIt.localIdentifier
-				logger:trace('RevertColID2nd:'..RevertColID2nd)
 			end
 		end
 		prefs.isRevert = propertyTable.isRevert
