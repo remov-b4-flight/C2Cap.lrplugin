@@ -21,10 +21,10 @@ Target of C2Cap is photos in collection that without 'Caption' yet.
 
 # 2. Install/インストール.  
 (It's standard way to install Lightroom plugin./Lightroomプラグインの標準的な手順です)  
-ダウンロードしたファイルをどこかのフォルダに置いて拡張子を.lrplugin (またはlrdevplugin)
+ダウンロードしたファイルをどこかのフォルダに置いて拡張子を.lrplugin
 にしてください。  
 Lightroomのプラグインマネージャーを開き'追加'ボタンを押します。  
-ダイアログで先ほどの .lrplugin(.lrdevplugin)を選択します。  
+ダイアログで先ほどの .lrpluginを選択します。  
 有効になっていない場合「有効にする」ボタンを押します。
 
 # 3. 使用方法.  
