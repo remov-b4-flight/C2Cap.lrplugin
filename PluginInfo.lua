@@ -49,11 +49,11 @@ function PluginInfo.sectionsForTopOfDialog( viewFactory, propertyTable )
 				viewFactory:checkbox {title = LOC '$$$/c2cap/revertback=Revert Back', value = bind 'isRevert',},
 			},
 			viewFactory:row {
-				viewFactory:static_text {title = LOC '$$$/c2cap/revertto=Collection',},
+				viewFactory:static_text {width_in_chars = 7, title = LOC '$$$/c2cap/revertto=Collection',},
 				viewFactory:edit_field {value = bind 'RevertTo',},
 			},
 			viewFactory:row {
-				viewFactory:static_text {title = LOC '$$$/c2cap/secondto=Second Col.',},
+				viewFactory:static_text {width_in_chars = 7, title = LOC '$$$/c2cap/secondto=Second Col.',},
 				viewFactory:edit_field {value = bind 'Revert2nd',},
 			},
 		},
