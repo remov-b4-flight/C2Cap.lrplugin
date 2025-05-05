@@ -4,7 +4,6 @@
 @author	remov-b4-flight
 ---------------------------------------------------------]]
 
-local PluginTitle='C2Cap'
 local LrApplication = import 'LrApplication'
 local LrTasks = import 'LrTasks'
 local LrProgress= import 'LrProgressScope'

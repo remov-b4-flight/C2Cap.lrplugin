@@ -27,12 +27,12 @@ function PluginInfo.endDialog( propertyTable )
 		for i,ColIt in ipairs(collections) do
 			if ColIt:getName() == propertyTable.RevertTo then
 				RevertColID = ColIt.localIdentifier
-				if RevartColID2nd ~= nil then
+				if RevertColID2nd ~= nil then
 					break
 				end
 			elseif ColIt:getName() == propertyTable.Revert2nd then
 				RevertColID2nd = ColIt.localIdentifier
-				if RevartColID ~= nil then
+				if RevertColID ~= nil then
 					break
 				end
 			end
@@ -48,7 +48,7 @@ end
 function PluginInfo.sectionsForTopOfDialog( viewFactory, propertyTable )
 	return {
 		{
-			title = 'C2Cap',
+			title = prefs.Title,
 			synopsis = LOC '$$$/c2cap/description=Set caption to collection name contained by.',
 			bind_to_object = propertyTable,
 			viewFactory:row {
