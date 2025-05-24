@@ -57,6 +57,7 @@ LrTasks.startAsyncTask( function ()
 	CurrentCatalog:withWriteAccessDo('Set Caption',function()
 		--loops photos in collection
 		for i,PhotoIt in ipairs(currPhotos) do
+			-- It's omitted 'ProgressBar:isCancelled()' check for speedup.
 			PhotoIt:setRawMetadata('caption',CollectionName)
 			ProgressBar:setPortionComplete(i,countPhotos)
 		end --end of for photos loop
