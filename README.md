@@ -50,5 +50,5 @@ Library->Plug-in Extras->   Collection
 じゅん [twitter](https://twitter.com/remov_b4_flight @remov_b4_flight)  
 Licences are GPL.  
 ライセンスはGPLです。  
-Every developpment is made by Mac.
+Every developpment is made by Mac.  
 開発は全てMacで行っています。  
