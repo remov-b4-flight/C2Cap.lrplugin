@@ -42,11 +42,13 @@ Library->Plug-in Extras->   Collection
 # 4. 設定. 
 プラグインマネージャの設定で以下の処理が可能です。
 
-##Revert Back(指定コレクションに戻る)  
+## Revert Back(指定コレクションに戻る)  
 コレクションのCaption設定処理を終えた後、テキストボックスで指定した  
 コレクションに移動します。  
 
 # 5. 作者・ライセンス.  
 じゅん [twitter](https://twitter.com/remov_b4_flight @remov_b4_flight)  
+Licences are GPL.  
 ライセンスはGPLです。  
+Every developpment is made by Mac.
 開発は全てMacで行っています。  
