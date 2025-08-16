@@ -42,7 +42,7 @@ Library->Plug-in Extras->   Collection
 # 4. 設定. 
 プラグインマネージャの設定で以下の処理が可能です。
 
-##Revert Back(指定コレクションに戻る)  
+## Revert Back(指定コレクションに戻る)  
 コレクションのCaption設定処理を終えた後、テキストボックスで指定した  
 コレクションに移動します。  
 
