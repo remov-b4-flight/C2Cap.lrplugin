@@ -11,6 +11,7 @@ local prefs = import 'LrPrefs'.prefsForPlugin()
 
 local CurrentCatalog = LrApplication:activeCatalog()
 local CurrentSelectionArray = CurrentCatalog:getActiveSources()
+local TIMEOUT = 0.25
 local Threshold = 15
 
 if (#CurrentSelectionArray > 1) then
@@ -54,7 +55,7 @@ LrTasks.startAsyncTask( function ()
 
 	local countPhotos = #currPhotos
 	local CompleteFlag = 0
-	CurrentCatalog:withWriteAccessDo('Set Caption',function()
+	CurrentCatalog:withWriteAccessDo(prefs.Title, function()
 		--loops photos in collection
 		for i,PhotoIt in ipairs(currPhotos) do
 			-- It's omitted 'ProgressBar:isCancelled()' check for speedup.
@@ -64,8 +65,10 @@ LrTasks.startAsyncTask( function ()
 		CompleteFlag = 1
 	end ,
 	-- a block called by write access can't get
-	{ timeout = 0,
-		callback = function() CompleteFlag = 0 end }
+	{ 	timeout = TIMEOUT,
+		callback = function() CompleteFlag = 0 end,
+		asynchronous = true
+	}
 	) -- end of withWriteAccessDo function()
 	ProgressBar:done()
 
