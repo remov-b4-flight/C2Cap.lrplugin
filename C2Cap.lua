@@ -8,6 +8,7 @@ local LrApplication = import 'LrApplication'
 local LrTasks = import 'LrTasks'
 local LrProgress= import 'LrProgressScope'
 local prefs = import 'LrPrefs'.prefsForPlugin()
+local Info = require 'Info'
 
 local CurrentCatalog = LrApplication:activeCatalog()
 local CurrentSelectionArray = CurrentCatalog:getActiveSources()
@@ -55,7 +56,7 @@ LrTasks.startAsyncTask( function ()
 
 	local countPhotos = #currPhotos
 	local CompleteFlag = 0
-	CurrentCatalog:withWriteAccessDo(prefs.Title, function()
+	CurrentCatalog:withWriteAccessDo(Info.LrPluginName, function()
 		--loops photos in collection
 		for i,PhotoIt in ipairs(currPhotos) do
 			-- It's omitted 'ProgressBar:isCancelled()' check for speedup.
