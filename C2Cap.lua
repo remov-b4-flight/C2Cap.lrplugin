@@ -30,7 +30,7 @@ elseif (currSelection.type() ~= 'LrCollection') then
 	return
 end
 
---Main part of this plugin.
+-- Main part of this plugin.
 LrTasks.startAsyncTask( function ()
 	if (currSelection:isSmartCollection()) then 
 		return
@@ -57,12 +57,12 @@ LrTasks.startAsyncTask( function ()
 	local countPhotos = #currPhotos
 	local CompleteFlag = 0
 	CurrentCatalog:withWriteAccessDo(Info.LrPluginName, function()
-		--loops photos in collection
+		-- loops photos in collection
 		for i,PhotoIt in ipairs(currPhotos) do
 			-- It's omitted 'ProgressBar:isCancelled()' check for speedup.
 			PhotoIt:setRawMetadata('caption',CollectionName)
 			ProgressBar:setPortionComplete(i,countPhotos)
-		end --end of for photos loop
+		end -- end of for photos loop
 		CompleteFlag = 1
 	end ,
 	-- a block called by write access can't get
@@ -74,7 +74,7 @@ LrTasks.startAsyncTask( function ()
 	ProgressBar:done()
 
 	-- Revert back to prefs.RevertTo
-	if prefs.isRevert and CompleteFlag == 1 then
+	if (prefs.isRevert and CompleteFlag == 1) then
 		local RevertCol = CurrentCatalog:getCollectionByLocalIdentifier(prefs.RevertColID)
 		if RevertCol == nil then
 			return
@@ -90,5 +90,5 @@ LrTasks.startAsyncTask( function ()
 			CurrentCatalog:setActiveSources(RevertCol2nd)
 		end
 	end
-end ) --end of startAsyncTask function()
+end ) -- end of startAsyncTask function()
 return
