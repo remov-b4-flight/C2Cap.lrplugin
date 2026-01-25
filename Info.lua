@@ -6,7 +6,7 @@
 
 return {
 
-	LrSdkVersion = 4.0,
+	LrSdkVersion = 6.0,
 
 	LrToolkitIdentifier = 'cx.ath.remov-b4-flight.c2cap',
 	LrPluginName = 'C2Cap',
@@ -18,6 +18,6 @@ return {
 	LrPluginInfoProvider = 'PluginInfo.lua',
 	LrInitPlugin = 'PluginInit.lua',
 
-	VERSION = { major=1, minor=7, revision=0, build=44, },
+	VERSION = { major=1, minor=7, revision=0, build=6, },
 
 }
