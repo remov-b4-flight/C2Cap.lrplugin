@@ -10,7 +10,7 @@ return {
 
 	LrToolkitIdentifier = 'cx.ath.remov-b4-flight.c2cap',
 	LrPluginName = 'C2Cap',
-	LrPluginInfoUrl='https://twitter.com/remov_b4_flight',
+	LrPluginInfoUrl='https://github.com/remov-b4-flight/C2Cap.lrplugin',
 	LrLibraryMenuItems = { 
 		{title = '&Collection',
 		file = 'C2Cap.lua',},
@@ -18,6 +18,6 @@ return {
 	LrPluginInfoProvider = 'PluginInfo.lua',
 	LrInitPlugin = 'PluginInit.lua',
 
-	VERSION = { major=1, minor=7, revision=0, build=6, },
+	VERSION = { major=1, minor=7, revision=0, build=7, },
 
 }
