@@ -8,6 +8,7 @@ local LrTasks = import 'LrTasks'
 local LrView = import 'LrView'
 local bind = LrView.bind -- a local shortcut for the binding function
 local prefs = import 'LrPrefs'.prefsForPlugin()
+local Info = require 'Info'
 
 local PluginInfo = {}
 local CurrentCatalog = LrApplication.activeCatalog()
@@ -48,7 +49,7 @@ end
 function PluginInfo.sectionsForTopOfDialog( viewFactory, propertyTable )
 	return {
 		{
-			title = prefs.Title,
+			title = Info.LrPluginName,
 			synopsis = LOC '$$$/c2cap/description=Set caption to collection name contained by.',
 			bind_to_object = propertyTable,
 			viewFactory:row {
